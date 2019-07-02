@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="/static/styleLogin.css" type="text/css" />
+        <title>Willkommen...</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">Header</div>
+            <div id="position">Position</div>
+            <div id="navigation">Navigation</div>
+            <div id="content">
+                <h1>Herzlich willkommen!</h1>
+                <p>
+                    Sie sind angemeldet als:
+                </p>
+                <div class="formline" >
+                    <label>Benuzername</label>
+                    {{ username }}
+                </div>
+                <br />
+
+            </div>
+            <div id="message"> {{ message }} </div>
+        </div>
+    </body>
+</html>
