@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `e_shop`.`Artikel` (
   `Geschlecht` VARCHAR(45) NULL,
   `Alter` INT NULL,
   `Rasse` VARCHAR(45) NULL,
-  `Herkunft` VARCHAR(45) NULL,
+  `Herkunft` VARCHAR(999) NULL,
   PRIMARY KEY (`idArtikel`))
 ENGINE = InnoDB;
 
@@ -100,6 +100,13 @@ CREATE TABLE IF NOT EXISTS `e_shop`.`Bestellung` (
 ENGINE = InnoDB;
 
 
+
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+insert into `User`(idUser, Benutzername, Passwort, Vorname, Nachname, Adresse, Telephon, Email) values (0, 'Chuebuur33', '123456', 'Hanf', 'Hans', 'Ballmoos 2', 0311871213, 'bauernhof@bluewin.ch');   
+insert into Artikel(idArtikel, `Name`, Preis, Bild, Geschlecht, `Alter`, Rasse, Herkunft) values (0, 'Fiddo', 500, '/res/img/fiddo.jpg', 'Weiblich', 5, 'Deutscher Drahthaar', 'Lebte bei alter Frau. Lebt jetzt im Hundeheim Solothurn. Scheu aber sehr liebenswürdig.');
+
+
