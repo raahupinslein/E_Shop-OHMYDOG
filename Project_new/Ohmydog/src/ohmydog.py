@@ -16,9 +16,8 @@ app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
 
 def checkLogin(username, password):
     cursor = mysql.connection.cursor()
-    cursor.execute('''select password from user where benutzername = %s''' %username)
+    cursor.execute('''select passwort from user where Benutzername = %s''' % username)
     rv = cursor.fetchall()
-    print(rv)
     if len(rv == 1) and rv == password:
         return True
 
@@ -27,7 +26,12 @@ def login():
     if request.method == 'POST':
         session['username'] = request.form['username']
         session['logged_In'] = checkLogin(session['username'], request.form['password'])
-        return redirect(url_for('loggedIn'))
+        return redirect(url_for('katalog'))
     return render_template('Login.html')
+
+@app.route('/katalog', methods=['GET', 'POST'])
+def katalog():
+    return render_template('Katalog.html')
+
 if __name__ == "__main__":
     app.run()
