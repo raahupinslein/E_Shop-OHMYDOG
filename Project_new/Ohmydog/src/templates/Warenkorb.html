@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel=stylesheet href=Login.css/>
+		<title>Warenkorb</title>
+	</head>
+	<body>
+<!--Header oben mit Homepage-Knopf links, Logo in der Mitte und Zum-Warenkorb-Knopf rechts -->
+        <div class="header">
+            <div id="Homepage_Button">
+            </div>
+            
+            <div id="Logo">
+                <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2017/09/ohmydogwalking-e1504264270287.png?auto=format&q=60&fit=max&w=930">
+            </div>
+            
+            <div id="Warenkorb_Button_Top">
+            </div>
+        </div>
+<!--Warenkorb mit maximal 4 Bestellungen-->
+        <h1>Warenkorb</h1>
+<!--Erste Bestellung-->
+        <div class="Bestellung">
+            <div class="Bestellung_Image"> 
+                {{ bestellung1_image }}
+            </div>
+            <div class="Bestellung_Title"> 
+                {{ bestellung1_title }}
+            </div>
+            <div class="Bestellung_Price"> 
+                {{ bestellung1_price }}
+            </div>  
+        </div>
+<!--Zweite Bestellung-->
+        <div class="Bestellung">
+            <div class="Bestellung_Image"> 
+                {{ bestellung2_image }}
+            </div>
+            <div class="Bestellung_Title"> 
+                {{ bestellung2_title }}
+            </div>
+            <div class="Bestellung_Price"> 
+                {{ bestellung2_price }}
+            </div>  
+        </div>
+<!--Dritte Bestellung-->
+        <div class="Bestellung">
+            <div class="Bestellung_Image"> 
+                {{ bestellung3_image }}
+            </div>
+            <div class="Bestellung_Title"> 
+                {{ bestellung3_title }}
+            </div>
+            <div class="Bestellung_Price"> 
+                {{ bestellung3_price }}
+            </div>  
+        </div>
+<!--Vierte Bestellung-->
+        <div class="Bestellung">
+            <div class="Bestellung_Image"> 
+                {{ bestellung4_image }}
+            </div>
+            <div class="Bestellung_Title"> 
+                {{ bestellung4_title }}
+            </div>
+            <div class="Bestellung_Price"> 
+                {{ bestellung4_price }}
+            </div>  
+        </div>        
+<!--Bezahlen-Knopf--> 
+        <div id="Bezahlen-Knopf">
+
+        </div>
+
+	</body>
+</html>
